@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Crown College</title>
+<meta name="description" content="Golden Crown College — excellence in education, character and opportunity.">
+<style>
+:root{--blue:#063b8c;--blue2:#0b5dcc;--yellow:#ffd21f;--dark:#10213d;--light:#f5f8ff;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);box-shadow:0 2px 14px #00000012}
+.nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--blue);font-size:1.15rem}
+.crown{width:42px;height:42px;border-radius:12px;background:var(--yellow);display:grid;place-items:center;font-size:23px}
+nav{display:flex;gap:22px;font-weight:700;font-size:.92rem}
+nav a:hover{color:var(--blue2)}
+.menu{display:none;border:0;background:transparent;font-size:26px;color:var(--blue)}
+.hero{background:linear-gradient(120deg,var(--blue),#0b66d6);color:white;min-height:590px;display:grid;place-items:center;text-align:center;padding:80px 20px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:var(--yellow);opacity:.13;right:-160px;top:-100px}
+.hero-content{max-width:850px;position:relative;z-index:2}
+.badge{display:inline-block;background:var(--yellow);color:#1d2b45;font-weight:800;padding:7px 16px;border-radius:30px;margin-bottom:18px}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.05;margin-bottom:18px}
+.hero p{font-size:1.15rem;max-width:700px;margin:0 auto 28px;opacity:.94}
+.btn{display:inline-block;padding:13px 22px;border-radius:9px;font-weight:800;margin:5px;transition:.2s}
+.primary{background:var(--yellow);color:#15233b}.primary:hover{transform:translateY(-2px)}
+.secondary{border:2px solid white;color:white}.secondary:hover{background:white;color:var(--blue)}
+section{padding:76px 20px}.wrap{max-width:1100px;margin:auto}
+.section-title{text-align:center;margin-bottom:42px}
+.section-title h2{font-size:2.2rem;color:var(--blue)}
+.section-title p{max-width:650px;margin:8px auto;color:#60708c}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:26px;background:white;border-radius:14px;box-shadow:0 8px 30px #183a6a12;border:1px solid #e8eef8}
+.icon{font-size:30px;margin-bottom:10px}.card h3{margin-bottom:7px;color:var(--blue)}
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.about-box{background:var(--blue);color:white;border-radius:18px;padding:38px;position:relative;overflow:hidden}
+.about-box strong{color:var(--yellow)}
+.subjects{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.subject{background:#fff;border-left:5px solid var(--yellow);padding:15px;border-radius:8px;box-shadow:0 4px 15px #163b7110;font-weight:700}
+.admissions{background:linear-gradient(135deg,#fff7c7,#eef5ff)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:white;padding:24px;border-radius:14px}.number{background:var(--yellow);width:35px;height:35px;border-radius:50%;display:grid;place-items:center;font-weight:900;margin-bottom:10px}
+.contact{background:var(--blue);color:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact h2{color:var(--yellow);margin-bottom:10px}
+form{background:white;padding:25px;border-radius:14px;color:var(--dark)}
+input,textarea{width:100%;padding:12px;margin:7px 0 12px;border:1px solid #d6deeb;border-radius:7px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+button{cursor:pointer}
+footer{background:#062d68;color:#dce8ff;text-align:center;padding:28px 20px}
+footer strong{color:var(--yellow)}
+@media(max-width:800px){
+ nav{display:none;position:absolute;left:0;right:0;top:70px;background:white;padding:18px 22px;flex-direction:column;box-shadow:0 10px 20px #0001}
+ nav.open{display:flex}.menu{display:block}.cards,.steps{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.subjects{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:430px){.subjects{grid-template-columns:1fr}section{padding:58px 16px}.nav{padding:12px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home"><span class="crown">♛</span><span>Golden Crown College</span></a>
+    <button class="menu" aria-label="Open menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#subjects">Subjects</a>
+      <a href="#admissions">Admissions</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="badge">EXCELLENCE • DISCIPLINE • SUCCESS</span>
+    <h1>Golden Crown College</h1>
+    <p>Building confident, knowledgeable and responsible young people through quality education and a culture of excellence.</p>
+    <a class="btn primary" href="#admissions">Apply / Enquire</a>
+    <a class="btn secondary" href="#subjects">Explore Subjects</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-title"><h2>Welcome to Golden Crown College</h2><p>A place where every learner is encouraged to discover their potential.</p></div>
+    <div class="about-grid">
+      <div>
+        <h3>Education with a purpose</h3>
+        <p>Golden Crown College is committed to creating a supportive learning environment where students develop strong academic foundations, practical skills, confidence and good character.</p><br>
+        <p>Our O-Level programme provides broad subject choices to help learners prepare for examinations, further education and future careers.</p>
+      </div>
+      <div class="about-box"><h3>Our vision</h3><p>To nurture <strong>excellent minds</strong>, strong character and future leaders who can make a positive difference.</p><br><h3>Our values</h3><p>Integrity • Respect • Discipline • Excellence • Responsibility</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="subjects">
+  <div class="wrap">
+    <div class="section-title"><h2>O-Level Subjects</h2><p>Our website can showcase the full range of subjects offered by the college.</p></div>
+    <div class="subjects">
+      <div class="subject">Mathematics</div><div class="subject">English Language</div><div class="subject">Shona</div><div class="subject">Ndebele</div>
+      <div class="subject">Combined Science</div><div class="subject">Biology</div><div class="subject">Chemistry</div><div class="subject">Physics</div>
+      <div class="subject">Geography</div><div class="subject">History</div><div class="subject">Business Studies</div><div class="subject">Accounting</div>
+      <div class="subject">Computer Science</div><div class="subject">Agriculture</div><div class="subject">Religious Studies</div><div class="subject">Art</div>
+      <div class="subject">Music</div><div class="subject">Physical Education</div><div class="subject">Technical & Vocational Studies</div><div class="subject">Other approved subjects</div>
+    </div>
+  </div>
+</section>
+
+<section class="admissions" id="admissions">
+  <div class="wrap">
+    <div class="section-title"><h2>Admissions</h2><p>Start your journey at Golden Crown College.</p></div>
+    <div class="steps">
+      <div class="step"><div class="number">1</div><h3>Make an enquiry</h3><p>Contact the college to ask about available places, fees and entry requirements.</p></div>
+      <div class="step"><div class="number">2</div><h3>Submit your details</h3><p>Complete the application process and provide the required academic information.</p></div>
+      <div class="step"><div class="number">3</div><h3>Join the Crown</h3><p>Complete admission and prepare for an exciting academic journey.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-title"><h2>Why Choose Us?</h2></div>
+    <div class="cards">
+      <div class="card"><div class="icon">📚</div><h3>Academic Excellence</h3><p>Focused learning and a broad O-Level subject programme.</p></div>
+      <div class="card"><div class="icon">🌟</div><h3>Student Development</h3><p>Encouraging confidence, responsibility, discipline and leadership.</p></div>
+      <div class="card"><div class="icon">🎯</div><h3>Future Focused</h3><p>Helping learners build foundations for further education and careers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Contact Golden Crown College</h2>
+        <p>Have a question about admissions or our O-Level programme? Get in touch.</p><br>
+        <p>📍 <strong>Location:</strong> Add school address</p>
+        <p>📞 <strong>Phone:</strong> Add school phone number</p>
+        <p>✉️ <strong>Email:</strong> Add school email</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been recorded on this demo website. Connect this form to email or a backend to receive real submissions.');">
+        <h3>Send an enquiry</h3>
+        <input required placeholder="Your name">
+        <input required type="email" placeholder="Email address">
+        <input placeholder="Phone number">
+        <textarea required placeholder="How can we help?"></textarea>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><p>© 2026 <strong>Golden Crown College</strong>. All rights reserved.</p></footer>
+<script>
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+</script>
+</body>
+</html>
